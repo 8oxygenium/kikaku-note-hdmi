@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HDMI規格一覧｜端子・バージョン・ケーブル・4K/8K対応早見表</title>
+  <meta name="description" content="HDMI Type A、Mini HDMI、Micro HDMI、HDMI 1.4/2.0/2.1/2.2、ARC/eARC、4K/8K対応、ケーブル選びをまとめたHDMI規格の早見表です。">
+  <link rel="canonical" href="https://hdmi.kikaku-note.com/">
+  <meta property="og:title" content="HDMI規格一覧｜端子・バージョン・ケーブル早見表">
+  <meta property="og:description" content="HDMI端子・バージョン・ケーブル・ARC/eARC・4K/8K対応をまとめて確認できる規格ノート。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hdmi.kikaku-note.com/">
+  <meta name="theme-color" content="#111827">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3M3YRW4B7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C3M3YRW4B7');
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --ink: #111827;
+      --muted: #5b6472;
+      --line: #d8dee9;
+      --accent: #1d4ed8;
+      --accent-soft: #dbeafe;
+      --warn: #92400e;
+      --warn-bg: #fef3c7;
+      --ok: #166534;
+      --ok-bg: #dcfce7;
+      --shadow: 0 18px 50px rgba(17,24,39,.08);
+      --radius: 20px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, #e0f2fe 0, transparent 34%),
+        radial-gradient(circle at top right, #ede9fe 0, transparent 28%),
+        var(--bg);
+      line-height: 1.75;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 56px 0 28px;
+    }
+
+    .breadcrumb {
+      font-size: .9rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .hero {
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(216,222,233,.8);
+      border-radius: 28px;
+      padding: clamp(26px, 5vw, 48px);
+      box-shadow: var(--shadow);
+    }
+
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #1e3a8a;
+      font-weight: 700;
+      font-size: .88rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .lead {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2vw, 1.22rem);
+      margin: 0;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .quick-card {
+      display: block;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .quick-card span {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: .86rem;
+      margin-top: 3px;
+    }
+
+    main { padding: 16px 0 64px; }
+
+    section {
+      margin-top: 28px;
+      padding: clamp(22px, 4vw, 34px);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(216,222,233,.9);
+      box-shadow: 0 8px 30px rgba(17,24,39,.05);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+      letter-spacing: -.03em;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.18rem;
+    }
+
+    p { margin: 0 0 12px; }
+
+    .note {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .warn {
+      background: var(--warn-bg);
+      border-color: #fde68a;
+      color: var(--warn);
+    }
+
+    .ok {
+      background: var(--ok-bg);
+      border-color: #bbf7d0;
+      color: var(--ok);
+    }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+      margin: 18px 0 4px;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      background: #fff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: .78rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .svg-port {
+      display: block;
+      width: 100%;
+      height: 72px;
+      margin: 10px 0 12px;
+      color: #111827;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 13px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-size: .92rem;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin-top: 14px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .time-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .year {
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    footer {
+      color: var(--muted);
+      padding: 30px 0 56px;
+      font-size: .92rem;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 860px) {
+      .quick-grid, .grid, .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .time-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="breadcrumb"><a href="https://kikaku-note.com/">規格ノート</a> / HDMI規格一覧</nav>
+    <div class="hero">
+      <div class="badge">HDMI早見表</div>
+      <h1>HDMI規格一覧</h1>
+      <p class="lead">
+        HDMI端子の種類、バージョン、ケーブル名、4K/8K対応、ARC/eARC、カメラ用HDMI出力までをまとめた早見表です。
+        テレビ、モニター、ゲーム機、カメラ、外部レコーダー接続の確認用に使えます。
+      </p>
+      <div class="quick-grid" aria-label="ページ内リンク">
+        <a class="quick-card" href="#connectors">端子の種類<span>Type A / Mini / Micro</span></a>
+        <a class="quick-card" href="#versions">バージョン<span>1.4 / 2.0 / 2.1 / 2.2</span></a>
+        <a class="quick-card" href="#cables">ケーブル選び<span>High Speed / Ultra High Speed</span></a>
+        <a class="quick-card" href="#camera">カメラ用途<span>外部モニター・レコーダー</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="search">
+      <h2>ページ内検索</h2>
+      <p class="note">例：4K、8K、eARC、Mini、Micro、PS5、カメラ、外部レコーダー、2.1 など。</p>
+      <div class="search-box">
+        <input id="filterInput" type="search" placeholder="キーワードで絞り込み">
+      </div>
+    </section>
+
+    <section id="summary" class="search-target">
+      <h2>まず結論</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>普通の4Kテレビ・モニター</h3>
+          <p>4K/60Hz中心なら、HDMI 2.0世代またはPremium High Speed HDMIケーブルで足りることが多いです。</p>
+        </div>
+        <div class="card">
+          <h3>ゲーム・高リフレッシュレート</h3>
+          <p>4K/120Hz、VRR、ALLMを狙うなら、HDMI 2.1対応機器とUltra High Speed HDMIケーブルを確認します。</p>
+        </div>
+        <div class="card">
+          <h3>テレビ音声をサウンドバーへ返す</h3>
+          <p>ARCよりeARCの方が高品位音声に向きます。テレビ、サウンドバー、AVアンプの両方の対応確認が必要です。</p>
+        </div>
+        <div class="card">
+          <h3>カメラ・外部モニター用途</h3>
+          <p>カメラ側はMini HDMIまたはMicro HDMIが多いです。端子形状、クリーンHDMI出力、記録解像度を確認します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="connectors" class="search-target">
+      <h2>HDMI端子の種類</h2>
+      <p>一般的に見る機会が多いのは、標準サイズのHDMI Type A、カメラなどに使われるMini HDMI、さらに小型機器向けのMicro HDMIです。</p>
+
+      <div class="grid">
+        <article class="card search-target">
+          <h3>HDMI Type A <span class="tag">標準</span></h3>
+          <svg class="svg-port" viewBox="0 0 260 90" aria-label="HDMI Type Aの簡易図">
+            <path d="M38 22 H222 L204 68 H56 Z" fill="#f8fafc" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M78 39 H182" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <p>テレビ、モニター、ゲーム機、PC、AVアンプなどで最もよく使われる標準サイズのHDMI端子。</p>
+        </article>
+
+        <article class="card search-target">
+          <h3>Mini HDMI Type C <span class="tag">小型</span></h3>
+          <svg class="svg-port" viewBox="0 0 260 90" aria-label="Mini HDMIの簡易図">
+            <path d="M62 26 H198 L184 64 H76 Z" fill="#f8fafc" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M95 42 H165" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <p>一部の一眼カメラ、ビデオカメラ、小型機器で使われる端子。外部モニター接続時に登場しやすい。</p>
+        </article>
+
+        <article class="card search-target">
+          <h3>Micro HDMI Type D <span class="tag">超小型</span></h3>
+          <svg class="svg-port" viewBox="0 0 260 90" aria-label="Micro HDMIの簡易図">
+            <path d="M82 30 H178 L168 60 H92 Z" fill="#f8fafc" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M110 44 H150" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <p>小型カメラ、アクションカメラ、タブレット系で使われることがある。ケーブルの抜き差しや破損に注意。</p>
+        </article>
+
+        <article class="card search-target">
+          <h3>HDMI Type E <span class="tag">車載</span></h3>
+          <p>自動車内での振動や抜け対策を考えた車載向け端子。一般ユーザーが単体で触る機会は少なめ。</p>
+        </article>
+
+        <article class="card search-target">
+          <h3>USB-C → HDMI</h3>
+          <p>USB-C端子から映像をHDMIに変換するタイプ。実際にはDisplayPort Alt Modeから変換している製品が多いです。</p>
+        </article>
+
+        <article class="card search-target">
+          <h3>HDMIとThunderbolt</h3>
+          <p>Thunderbolt端子は形状がUSB-Cの場合があります。HDMIとは端子形状も信号も別物なので、変換アダプターの対応確認が必要です。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="versions" class="search-target">
+      <h2>HDMIバージョン早見表</h2>
+      <p class="warn note">
+        注意：HDMIは「バージョン番号」だけでなく、機器側がどの機能を実装しているかが重要です。
+        商品ページでは「4K/120Hz対応」「VRR対応」「eARC対応」のように、目的の機能名まで確認します。
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>バージョン</th>
+              <th>目安</th>
+              <th>主な用途</th>
+              <th>確認ポイント</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="search-target">
+              <td>HDMI 1.4系</td>
+              <td>4K/30Hz世代</td>
+              <td>古めのテレビ、プロジェクター、フルHD機器</td>
+              <td>4K/60Hzには基本的に向かない</td>
+            </tr>
+            <tr class="search-target">
+              <td>HDMI 2.0系</td>
+              <td>4K/60Hz世代</td>
+              <td>4Kテレビ、PCモニター、一般的な映像出力</td>
+              <td>HDR、色深度、色差設定で必要帯域が変わる</td>
+            </tr>
+            <tr class="search-target">
+              <td>HDMI 2.1系</td>
+              <td>最大48Gbps世代</td>
+              <td>4K/120Hz、8K、VRR、ALLM、eARC</td>
+              <td>Ultra High Speed HDMIケーブル推奨</td>
+            </tr>
+            <tr class="search-target">
+              <td>HDMI 2.2系</td>
+              <td>最大96Gbps世代</td>
+              <td>将来の高解像度・高リフレッシュレート用途</td>
+              <td>Ultra96 HDMIケーブルや対応機器の普及待ち</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cables" class="search-target">
+      <h2>HDMIケーブルの選び方</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ケーブル表記</th>
+              <th>目安</th>
+              <th>向いている用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="search-target">
+              <td>Standard HDMI Cable</td>
+              <td>古いHDMI機器向け</td>
+              <td>現在の4K用途では選ぶ理由が少ない</td>
+            </tr>
+            <tr class="search-target">
+              <td>High Speed HDMI Cable</td>
+              <td>フルHD〜一部4K</td>
+              <td>古めの機器、フルHD出力</td>
+            </tr>
+            <tr class="search-target">
+              <td>Premium High Speed HDMI Cable</td>
+              <td>18Gbps級</td>
+              <td>4K/60Hz、HDR対応の基本ライン</td>
+            </tr>
+            <tr class="search-target">
+              <td>Ultra High Speed HDMI Cable</td>
+              <td>48Gbps級</td>
+              <td>4K/120Hz、8K、VRR、HDMI 2.1系</td>
+            </tr>
+            <tr class="search-target">
+              <td>Ultra96 HDMI Cable</td>
+              <td>96Gbps級</td>
+              <td>HDMI 2.2世代の将来向け</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>買うときのチェック</h3>
+      <ul>
+        <li>4K/120Hz目的なら「Ultra High Speed HDMI Cable」表記を確認。</li>
+        <li>長尺ケーブルは信号品質に注意。長くするほどトラブル要因が増えます。</li>
+        <li>安価なケーブルは「HDMI 2.1対応」と書いてあっても、実際の対応帯域や認証表記を確認。</li>
+        <li>カメラ用途では、端子形状とケーブルの取り回し、抜け止め対策も重要。</li>
+      </ul>
+    </section>
+
+    <section id="arc-earc" class="search-target">
+      <h2>ARC / eARCとは</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>ARC</h3>
+          <p>Audio Return Channelの略。テレビの音声をHDMIケーブル経由でサウンドバーやAVアンプへ戻すための機能。</p>
+        </div>
+        <div class="card">
+          <h3>eARC</h3>
+          <p>Enhanced Audio Return Channelの略。ARCより高品位な音声フォーマットに向き、ホームシアター用途で重要。</p>
+        </div>
+      </div>
+      <p class="note">ARC/eARCは、テレビ側・サウンドバー側・AVアンプ側の対応端子に接続する必要があります。単にHDMI端子へ挿せば必ず動くわけではありません。</p>
+    </section>
+
+    <section id="camera" class="search-target">
+      <h2>カメラ用途のHDMI</h2>
+      <p>カメラマン用途では、HDMIは外部モニター、外部レコーダー、ライブ配信、スイッチャー接続で重要です。</p>
+      <div class="grid">
+        <article class="card search-target">
+          <h3>外部モニター</h3>
+          <p>ピント確認、構図確認、ローアングル撮影、ジンバル撮影で有効。ケーブル抜けと端子破損に注意。</p>
+        </article>
+        <article class="card search-target">
+          <h3>外部レコーダー</h3>
+          <p>カメラによってはHDMI出力から高品質記録が可能。クリーンHDMI出力、解像度、フレームレートを確認。</p>
+        </article>
+        <article class="card search-target">
+          <h3>配信・スイッチャー</h3>
+          <p>ATEM Miniなどのスイッチャーに接続する場合、出力解像度、音声、HDCP、遅延を確認。</p>
+        </article>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>確認項目</th>
+              <th>見る場所</th>
+              <th>注意点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="search-target">
+              <td>端子形状</td>
+              <td>カメラ本体側面・仕様表</td>
+              <td>標準HDMI、Mini HDMI、Micro HDMIを間違えない</td>
+            </tr>
+            <tr class="search-target">
+              <td>クリーンHDMI出力</td>
+              <td>動画出力設定</td>
+              <td>画面表示やフォーカス枠が乗ると収録・配信に不向き</td>
+            </tr>
+            <tr class="search-target">
+              <td>出力解像度</td>
+              <td>HDMI出力設定</td>
+              <td>4K出力できても収録中はHDになる機種がある</td>
+            </tr>
+            <tr class="search-target">
+              <td>端子保護</td>
+              <td>現場装備</td>
+              <td>ケージ、ケーブルクランプ、L字ケーブルを検討</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="timeline" class="search-target">
+      <h2>HDMIざっくり年表</h2>
+      <div class="timeline">
+        <div class="time-item search-target"><div class="year">2002</div><div>HDMI 1.0。デジタル映像・音声を1本で送る家庭向けインターフェースとして登場。</div></div>
+        <div class="time-item search-target"><div class="year">2006</div><div>HDMI 1.3。Mini HDMI Type Cなど、小型機器向けの展開が進む。</div></div>
+        <div class="time-item search-target"><div class="year">2009</div><div>HDMI 1.4。4K対応、ARC、3D映像などの世代。</div></div>
+        <div class="time-item search-target"><div class="year">2013</div><div>HDMI 2.0。4K/60Hz時代の基本ライン。</div></div>
+        <div class="time-item search-target"><div class="year">2017</div><div>HDMI 2.1。4K/120Hz、8K、VRR、ALLM、eARCなどの機能が重要に。</div></div>
+        <div class="time-item search-target"><div class="year">2025</div><div>HDMI 2.2。96Gbps、Ultra96 HDMIケーブル、LIPなど将来向けの仕様が登場。</div></div>
+      </div>
+    </section>
+
+    <section id="faq" class="search-target">
+      <h2>よくある確認</h2>
+
+      <h3>HDMI 2.1と書いてあれば必ず4K/120Hzできますか？</h3>
+      <p>必ずではありません。機器側の対応機能、出力設定、ケーブル、モニター側入力のすべてを確認します。</p>
+
+      <h3>PS5やXboxで使うなら？</h3>
+      <p>4K/120HzやVRRを狙うなら、ゲーム機・テレビ・モニター・ケーブルの全てが対応している必要があります。</p>
+
+      <h3>カメラ用HDMIケーブルは何を買えばいい？</h3>
+      <p>まずカメラ側の端子形状を確認します。次にケーブル長、柔らかさ、L字端子、抜け止め、ケージとの干渉を確認します。</p>
+
+      <h3>HDMIとDisplayPortはどちらがいい？</h3>
+      <p>テレビ・ゲーム機・AV機器はHDMI、PCモニター・高リフレッシュレート用途はDisplayPortも候補になります。用途で選びます。</p>
+    </section>
+
+    <section id="related" class="search-target">
+      <h2>関連する規格ノート</h2>
+      <div class="grid">
+        <a class="card" href="https://usb.kikaku-note.com/">USB端子の種類一覧</a>
+        <a class="card" href="https://camera.kikaku-note.com/">カメラ規格メモ</a>
+        <a class="card" href="https://sd.kikaku-note.com/">SDカード規格一覧</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://kikaku-note.com/about/">運営者情報</a>
+        <a href="https://kikaku-note.com/privacy/">プライバシーポリシー</a>
+        <a href="https://kikaku-note.com/contact/">お問い合わせ</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© 規格ノート / kikaku-note.com</p>
+    <p>このページは一般的な規格確認用の早見表です。実際の対応可否は、使用する機器・ケーブル・設定・メーカー仕様をご確認ください。</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('filterInput');
+    const targets = Array.from(document.querySelectorAll('.search-target'));
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      targets.forEach(el => {
+        const text = el.innerText.toLowerCase();
+        el.classList.toggle('hidden', q && !text.includes(q));
+      });
+    });
+  </script>
+</body>
+</html>
