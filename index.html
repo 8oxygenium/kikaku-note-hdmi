@@ -324,7 +324,62 @@
         padding: 20px;
       }
     }
-  </style>
+
+.affiliate-footer {
+  margin: 28px 0 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--border, var(--line, #dedbd2));
+  border-radius: 8px;
+  background: var(--paper, #fff);
+  color: var(--muted, #666);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.affiliate-label {
+  margin: 0 0 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted, #666);
+}
+
+.affiliate-note {
+  margin: 0 0 10px;
+}
+
+.amazon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--accent, #006c67);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--accent-ink, var(--accent, #006c67));
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.amazon-button:hover,
+.amazon-button:focus-visible {
+  background: var(--soft, #f4f1ea);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .affiliate-footer {
+    margin: 22px 0 14px;
+    padding: 12px 14px;
+  }
+
+  .amazon-button {
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
   <header class="wrap">
@@ -632,6 +687,12 @@
       </div>
     </section>
   </main>
+
+  <section class="affiliate-footer" aria-label="広告とAmazonアソシエイトについて">
+    <p class="affiliate-label">PR</p>
+    <p class="affiliate-note">このページにはアフィリエイトリンクを含みます。<br>Amazonのアソシエイトとして、規格ノートは適格販売により収入を得ています。</p>
+    <a class="amazon-button" href="https://www.amazon.co.jp/s?k=HDMIケーブル&tag=kikakunote-hdmi-22" target="_blank" rel="nofollow sponsored noopener">Amazonで関連商品を見る</a>
+  </section>
 
   <footer class="wrap">
     <p>© 規格ノート / kikaku-note.com</p>
